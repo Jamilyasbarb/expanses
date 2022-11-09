@@ -12,8 +12,8 @@ class TransactionForm extends StatefulWidget {
 }
 
 class _TransactionFormState extends State<TransactionForm> {
-  final titleController = TextEditingController();
 
+  final titleController = TextEditingController();
   final valueController = TextEditingController();
 
   _submitForm(){
@@ -36,20 +36,20 @@ class _TransactionFormState extends State<TransactionForm> {
                 children: [
                   TextField(
                     //funcionar tanto pra windows como pra ios
-                    keyboardType: TextInputType.numberWithOptions(decimal: true),
-                    onSubmitted: ((_) => _submitForm()),
-                    controller: titleController,
                     decoration: InputDecoration(
                       labelText: 'Título',
                     ),
+                    controller: titleController,
+                    onSubmitted: ((_) => _submitForm()),
                   ),
                   TextField(
-                    controller: valueController,
-                    onSubmitted: ((_) => _submitForm()),
                     decoration: InputDecoration(
-                      labelText: 'R\$ Valor'
+                      labelText: 'R\$ Valor',
                       // border: OutlineInputBorder()
                     ),
+                    controller: valueController,
+                    onSubmitted: ((_) => _submitForm()),
+                    keyboardType: TextInputType.numberWithOptions(decimal: true),
                   ),
                   TextButton(
                     onPressed: _submitForm, 
