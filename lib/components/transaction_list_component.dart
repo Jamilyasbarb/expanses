@@ -36,7 +36,7 @@ class TransactionList extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Colors.purple
+                      color: Theme.of(context).primaryColor
                     ),
                   ),
                 ),
@@ -62,19 +62,6 @@ class TransactionList extends StatelessWidget {
               ],
             ),
           );
-          // return ListTile(
-          //   leading: ClipRRect(
-          //     borderRadius: BorderRadius.circular(50),
-          //     child: Container(
-          //       height: 150,
-          //       width: 58,
-          //       color: Colors.blue,
-          //       child: Center(child: Text(tr.value.toString())),
-          //     ),
-          //   ),
-          //   title: Text(tr.title),
-          //   subtitle: Text(tr.date.toString()),
-          // );
         }).toList(),
       ),
     );
